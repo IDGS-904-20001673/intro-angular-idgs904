@@ -18,17 +18,17 @@
             <!-- con este *ngIf="alumnos.length" validamos si hay datos en el arreglo, que se muestren -->
             <table class="table" *ngIf="alumnosIric.length">
                 <thead>
-                    <th><button (click)="showImagen()" class="btn btn-primary">{{muestraImg?'Oculta ':'Muestra
+                    <th><button (click)="showImagen()" class="btn btn-primary">{{muestraImg?'Ocultar ':'Muestra
                             '}}Imagen</button></th>
-                    <th>Foto</th>
                     <th>Matricula</th>
                     <th>Nombre</th>
                     <th>Edad</th>
                     <th>Pago</th>
                     <th>Correo</th>
+                    <th>Calificacion</th>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let alumno of alumnosIric">
+                    <tr *ngFor="let alumno of alumnosIric | alumnosFilter:listFilter">
                         <td><img *ngIf="muestraImg" [src]="alumno.foto" [title]="alumno.nombre"
                                 [style.width.px]="imageWidth" [style.mairgin.px]="imageMargin"></td>
                         <td>{{alumno.matricula}}</td>
@@ -36,6 +36,8 @@
                         <td>{{alumno.edad}}</td>
                         <td>{{alumno.pago}}</td>
                         <td>{{alumno.correo}}</td>
+                        <td>{{alumno.calif}}</td>
+                        <td>   <app-califiacion-alum [califica]="alumno.calif"></app-califiacion-alum> </td>
                 </tbody>
             </table>
         </div>

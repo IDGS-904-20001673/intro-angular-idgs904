@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { SumarComponent } from './escuela/formularios/sumar/sumar.component';
 import { OperasBasComponent } from './escuela/formularios/operas-bas/operas-bas.component';
 import { OperasModule } from './escuela/formularios/operas/operas.module';
+import { AlumnosFilterPipe } from './escuela/alumnos-filter.pipe';
+import { CalifiacionAlumComponent } from './escuela/califiacion-alum/califiacion-alum.component';
 
 
 //aqui agregamos nuestras referencias a otros htmls
@@ -21,7 +23,9 @@ import { OperasModule } from './escuela/formularios/operas/operas.module';
     ievnComponent,
     IricComponent,
     MenuComponent,
-    SumarComponent
+    SumarComponent,
+    AlumnosFilterPipe,
+    CalifiacionAlumComponent
   ],
   imports: [
     BrowserModule,
