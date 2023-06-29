@@ -11,8 +11,7 @@ export class IricComponent {
   imageMargin:number=2;
   muestraImg:boolean=true;
   listFilter:string='';
-
-
+  alumnoTitle!:string;
 
 alumnosIric: IAlumnos[]=[
   {
@@ -22,7 +21,7 @@ edad:23,
 correo:'leonel@gmail.com',
 pago:123.4,
 foto:"https://m.media-amazon.com/images/I/71-V2BFq67L.__AC_SY300_SX300_QL70_ML2_.jpg",
-calif:8
+calif:8.7
 },{
   matricula:1234,
   nombre:'Carlos',
@@ -30,7 +29,7 @@ calif:8
   correo:'leonel@gmail.com',
   pago:123.4,
   foto:"https://m.media-amazon.com/images/I/71-V2BFq67L.__AC_SY300_SX300_QL70_ML2_.jpg",
-  calif:9
+  calif:5
 },{
   matricula:1234,
   nombre:'Mario',
@@ -38,11 +37,15 @@ calif:8
   correo:'leonel@gmail.com',
   pago:123.4,
   foto:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHIJlbKpdfpu2iqDva26mXX6do_Kc7UjKzJ7ZHMl8Rhk59D85zWQ-9MfavG-0gG0ELXeM&usqp=CAU",
-  calif:10
+  calif:6.2
 }]
 
 
 showImagen():void{
   this.muestraImg = !this.muestraImg;
+}
+
+onCalificaClick(message:string){
+  this.alumnoTitle=`${message}`;
 }
 }

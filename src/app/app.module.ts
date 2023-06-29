@@ -7,12 +7,13 @@ import { escuelaComponent } from './escuela/escuela.component';
 import { ievnComponent } from './ievn/ievn.components';
 import { IricComponent } from './escuela/iric/iric.component';
 import { MenuComponent } from './escuela/menu/menu.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SumarComponent } from './escuela/formularios/sumar/sumar.component';
 import { OperasBasComponent } from './escuela/formularios/operas-bas/operas-bas.component';
 import { OperasModule } from './escuela/formularios/operas/operas.module';
 import { AlumnosFilterPipe } from './escuela/alumnos-filter.pipe';
 import { CalifiacionAlumComponent } from './escuela/califiacion-alum/califiacion-alum.component';
+import { AlumnoReactiveComponent } from './formularios/alumno-reactive/alumno-reactive.component';
 
 
 //aqui agregamos nuestras referencias a otros htmls
@@ -25,12 +26,14 @@ import { CalifiacionAlumComponent } from './escuela/califiacion-alum/califiacion
     MenuComponent,
     SumarComponent,
     AlumnosFilterPipe,
-    CalifiacionAlumComponent
+    CalifiacionAlumComponent,
+    AlumnoReactiveComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    OperasModule
+    OperasModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

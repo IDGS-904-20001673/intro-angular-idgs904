@@ -25,7 +25,7 @@
                     <th>Edad</th>
                     <th>Pago</th>
                     <th>Correo</th>
-                    <th>Calificacion</th>
+                    <th>Calificacion{{alumnoTitle}}</th>
                 </thead>
                 <tbody>
                     <tr *ngFor="let alumno of alumnosIric | alumnosFilter:listFilter">
@@ -37,7 +37,8 @@
                         <td>{{alumno.pago}}</td>
                         <td>{{alumno.correo}}</td>
                         <td>{{alumno.calif}}</td>
-                        <td>   <app-califiacion-alum [califica]="alumno.calif"></app-califiacion-alum> </td>
+                        <td>   <app-califiacion-alum (calificaClick)="onCalificaClick($event)"
+                            [califica]="alumno.calif"></app-califiacion-alum> </td>
                 </tbody>
             </table>
         </div>
